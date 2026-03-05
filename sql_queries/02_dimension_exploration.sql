@@ -1,5 +1,16 @@
-SELECT DISTINCT country
-FROM customers;
+--- EXPLORE DIMENSIONS---
+---EXPLORE ALL COUNTRIES OUR CUSTOMERS COME FROM
 
+SELECT DISTINCT country
+FROM gold.dim_customers;
+
+--- EXPLORE ALL PRODUCT CATEGORIES "THE MAJOR DIVISION"
 SELECT DISTINCT category
-FROM products;
+FROM gold.dim_products;
+
+-----EXPLORE ALL PRODUCT CATEGORIES "THE MAJOR DIVISIONS"
+SELECT DISTINCT category,
+	subcategory,
+	product_name
+FROM gold.dim_products
+ORDER BY 1,2,3
